@@ -1,3 +1,10 @@
+/*
+    CastleBomber
+    COMP 420 Star Wars Database
+    Group Project
+    Tutorial: Youtube JavaFX Tutorial | Login and Register GUI in IntelliJ & Scene Builder With MySQL by tookootek
+ */
+
 package sample;
 
 import javafx.application.Application;
