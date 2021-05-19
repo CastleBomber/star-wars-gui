@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,6 +24,20 @@ public class RegisterController implements Initializable {
     private ImageView shieldImageView;
     @FXML
     private Button closeButton;
+    @FXML
+    private Label registrationMessageLabel;
+    @FXML
+    private PasswordField setPasswordField;
+    @FXML
+    private PasswordField confirmPasswordField;
+    @FXML
+    private Label confirmPasswordLabel;
+    @FXML
+    private TextField firstnameTextField;
+    @FXML
+    private TextField lastnameTextField;
+    @FXML
+    private TextField usernameTextField;
 
     public void initialize(URL url, ResourceBundle resourceBundle){
         File shieldFile = new File("images/shield.png");
@@ -30,10 +45,44 @@ public class RegisterController implements Initializable {
         shieldImageView.setImage(shieldImage);
     }
 
+    public void registerButtonOnAction(ActionEvent event){
+        if(setPasswordField.getText().equals(confirmPasswordField.getText())){
+            registerUser();
+            confirmPasswordLabel.setText("");
+        } else {
+            confirmPasswordLabel.setText("Password does not match");
+        }
+    }
+
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
+        Platform.exit();
     }
 
+    public void registerUser(){
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectDB = connectNow.getConnection();
+
+        String firstname = firstnameTextField.getText();
+        String lastname = lastnameTextField.getText();
+        String username = usernameTextField.getText();
+        String password = setPasswordField.getText();
+
+        @SuppressWarnings("SqlResolve") String insertFields = "insert into user_account(lastname, firstname, username, password) VALUES ('";
+        String insertValues = firstname + "','" + lastname + "','" + username + "','" + password + "')";
+        String insertToRegister = insertFields + insertValues;
+
+        try{
+            Statement statement = connectDB.createStatement();
+            statement.executeUpdate(insertToRegister);
+            registrationMessageLabel.setText("User has been registered successfully!");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+
+    }
 
 }
