@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="567.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CreateOptionsController">
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #22609b;">
@@ -18,7 +17,7 @@
          </children>
       </AnchorPane>
       <Button fx:id="useraccountButton" layoutX="218.0" layoutY="126.0" mnemonicParsing="false" onAction="#useraccountButtonOnAction" text="User_Account" />
-      <Button fx:id="peopleButton" layoutX="232.0" layoutY="188.0" mnemonicParsing="false" text="PEOPLE" />
+      <Button fx:id="peopleButton" layoutX="234.0" layoutY="187.0" mnemonicParsing="false" onAction="#peopleButtonOnAction" text="PEOPLE" />
       <Button fx:id="starshipsButton" layoutX="224.0" layoutY="236.0" mnemonicParsing="false" text="STARSHIPS" />
       <Button fx:id="speciesButton" layoutX="233.0" layoutY="284.0" mnemonicParsing="false" text="SPECIES" />
       <Button fx:id="weaponsButton" layoutX="226.0" layoutY="332.0" mnemonicParsing="false" text="WEAPONS" />

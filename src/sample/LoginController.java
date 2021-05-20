@@ -86,6 +86,7 @@ public class LoginController implements Initializable {
 
     }
 
+    // no longer used, instead using displayCRUDoptions
     public void createUserAccountForm(){
         try{
             Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));

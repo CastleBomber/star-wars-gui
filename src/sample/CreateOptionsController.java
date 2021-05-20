@@ -8,18 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.io.File;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
 
@@ -45,6 +37,20 @@ public class CreateOptionsController implements  Initializable{
     public void useraccountButtonOnAction(ActionEvent event){
         try{
             Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.initStyle(StageStyle.UNDECORATED);
+            registerStage.setScene(new Scene(root, 520, 567));
+            registerStage.show();
+
+        } catch(Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
+    public void peopleButtonOnAction(ActionEvent event){
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("createPeople.fxml"));
             Stage registerStage = new Stage();
             registerStage.initStyle(StageStyle.UNDECORATED);
             registerStage.setScene(new Scene(root, 520, 567));
