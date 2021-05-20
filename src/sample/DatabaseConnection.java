@@ -4,14 +4,20 @@ import java.sql.DriverManager;
 
 
 public class DatabaseConnection {
-    public Connection databaseLink = null; /////
+    public Connection databaseLink = null;
 
     public Connection getConnection(){
-        String databaseName = "saleco";
+        /*String databaseName = "saleco";
         String databaseUser = "root";
         String databasePassword = "dB420$?CX";
         String driver = "com.mysql.cj.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/" + databaseName;
+        String url = "jdbc:mysql://localhost:3306/" + databaseName;*/
+
+        String databaseName = "castlebo_starwars";
+        String databaseUser = "castlebo_root";
+        String databasePassword = "shwi627F&&+";
+        String driver = "com.mysql.cj.jdbc.Driver";
+        String url = "jdbc:mysql://castlebomber.cikeys.com:3306/" + databaseName;
 
         try{
             Class.forName(driver);

@@ -72,8 +72,8 @@ public class LoginController implements Initializable {
 
             while(queryResult.next()){
                 if(queryResult.getInt(1) == 1){
-                    //loginMessageLabel.setText("Congratulations!");
-                    createAccountForm();
+                    //createUserAccountForm(); /////
+                    displayCRUDoptions(); /////
                 } else{
                     loginMessageLabel.setText("Invalid login. Please try again.");
                 }
@@ -86,9 +86,23 @@ public class LoginController implements Initializable {
 
     }
 
-    public void createAccountForm(){
+    public void createUserAccountForm(){
         try{
             Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.initStyle(StageStyle.UNDECORATED);
+            registerStage.setScene(new Scene(root, 520, 567));
+            registerStage.show();
+
+        } catch(Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
+    public void displayCRUDoptions(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("CRUDoptions.fxml"));
             Stage registerStage = new Stage();
             registerStage.initStyle(StageStyle.UNDECORATED);
             registerStage.setScene(new Scene(root, 520, 567));
