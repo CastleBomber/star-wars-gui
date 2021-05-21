@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="567.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CRUDoptionsController">
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #22609b;">
@@ -18,7 +17,7 @@
          </children>
       </AnchorPane>
       <Button fx:id="createButton" layoutX="225.0" layoutY="140.0" mnemonicParsing="false" onAction="#createButtonOnAction" text="CREATE" />
-      <Button fx:id="readButton" layoutX="225.0" layoutY="200.0" mnemonicParsing="false" text="READ" />
+      <Button fx:id="readButton" layoutX="225.0" layoutY="200.0" mnemonicParsing="false" onAction="#readButtonOnAction" text="READ" />
       <Button fx:id="updateButton" layoutX="225.0" layoutY="255.0" mnemonicParsing="false" text="UPDATE" />
       <Button fx:id="deleteButton" layoutX="225.0" layoutY="327.0" mnemonicParsing="false" text="DELETE" />
       <Button fx:id="closeButton" layoutX="440.0" layoutY="517.0" mnemonicParsing="false" onAction="#closeButtonOnAction" text="CLOSE" />

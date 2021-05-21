@@ -18,7 +18,7 @@
                   <Image url="@../../images/shield.png" />
                </image>
             </ImageView>
-            <Label layoutX="112.0" layoutY="27.0" text="User Registration" textFill="WHITE">
+            <Label layoutX="200.0" layoutY="27.0" text="User Registration" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
