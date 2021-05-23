@@ -24,11 +24,11 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Button fx:id="updateButton" layoutX="160.0" layoutY="308.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="UPDATE">
+      <Button fx:id="updateButton" layoutX="160.0" layoutY="308.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="50.0" prefWidth="200.0" text="UPDATE">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Button fx:id="deleteButton" layoutX="160.0" layoutY="385.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="DELETE">
+      <Button fx:id="deleteButton" layoutX="160.0" layoutY="385.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="50.0" prefWidth="200.0" text="DELETE">
          <font>
             <Font size="18.0" />
          </font></Button>

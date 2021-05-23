@@ -147,7 +147,53 @@ public class ReadOptionsController implements Initializable {
     }
 
     public void planetsMenuItemOnAction(ActionEvent event){
-        screen1.setText("planets");
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectDB = connectNow.getConnection();
+
+        String query = "select * from PLANETS";
+
+        try{
+            Statement statement = connectDB.createStatement();
+            ResultSet queryResult = statement.executeQuery(query);
+
+            boolean loop = true;
+            while(loop) {
+                if (queryResult.next()) {
+                    screen1.setText(queryResult.getString("planets_name"));
+                } else {
+                    loop = false;
+                    break;
+                }
+                if (queryResult.next()) {
+                    screen2.setText(queryResult.getString("planets_name"));
+                } else {
+                    loop = false;
+                    break;
+                }
+                if (queryResult.next()) {
+                    screen3.setText(queryResult.getString("planets_name"));
+                } else {
+                    loop = false;
+                    break;
+                }
+                if (queryResult.next()) {
+                    screen4.setText(queryResult.getString("planets_name"));
+                } else {
+                    loop = false;
+                    break;
+                }
+                if (queryResult.next()) {
+                    screen5.setText(queryResult.getString("planets_name"));
+                } else {
+                    loop = false;
+                    break;
+                }
+            }
+            queryResult.close();
+        } catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
     }
 
     public void speciesMenuItemOnAction(ActionEvent event){

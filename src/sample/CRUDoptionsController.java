@@ -75,6 +75,34 @@ public class CRUDoptionsController implements Initializable {
         }
     }
 
+    public void updateButtonOnAction(ActionEvent event){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("updateOptions.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.initStyle(StageStyle.UNDECORATED);
+            registerStage.setScene(new Scene(root, 520, 567));
+            registerStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
+    public void deleteButtonOnAction(ActionEvent event){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("deleteOptions.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.initStyle(StageStyle.UNDECORATED);
+            registerStage.setScene(new Scene(root, 520, 567));
+            registerStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
