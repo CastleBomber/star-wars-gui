@@ -16,12 +16,13 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="useraccountButton" layoutX="218.0" layoutY="126.0" mnemonicParsing="false" onAction="#useraccountButtonOnAction" text="User_Account" />
-      <Button fx:id="peopleButton" layoutX="234.0" layoutY="187.0" mnemonicParsing="false" onAction="#peopleButtonOnAction" text="PEOPLE" />
-      <Button fx:id="starshipsButton" layoutX="224.0" layoutY="236.0" mnemonicParsing="false" text="STARSHIPS" />
-      <Button fx:id="speciesButton" layoutX="233.0" layoutY="284.0" mnemonicParsing="false" onAction="#speciesButtonOnAction" text="SPECIES" />
-      <Button fx:id="weaponsButton" layoutX="226.0" layoutY="332.0" mnemonicParsing="false" text="WEAPONS" />
+      <Button fx:id="peopleButton" layoutX="160.0" layoutY="207.0" mnemonicParsing="false" onAction="#peopleButtonOnAction" prefHeight="50.0" prefWidth="200.0" text="PEOPLE" />
+      <Button fx:id="starshipsButton" layoutX="160.0" layoutY="271.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="STARSHIPS" />
+      <Button fx:id="speciesButton" layoutX="160.0" layoutY="336.0" mnemonicParsing="false" onAction="#speciesButtonOnAction" prefHeight="50.0" prefWidth="200.0" text="SPECIES" />
+      <Button fx:id="weaponsButton" layoutX="160.0" layoutY="393.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="WEAPONS" />
       <Button fx:id="closeButton" layoutX="444.0" layoutY="520.0" mnemonicParsing="false" onAction="#closeButtonOnAction" text="CLOSE" />
-      <Button fx:id="planetsButton" layoutX="234.0" layoutY="382.0" mnemonicParsing="false" onAction="#planetsButtonOnAction" text="Planets" />
+      <Button fx:id="planetsButton" layoutX="160.0" layoutY="452.0" mnemonicParsing="false" onAction="#planetsButtonOnAction" prefHeight="50.0" prefWidth="200.0" text="Planets" />
+      <Button fx:id="goBackButton" layoutX="47.0" layoutY="515.0" mnemonicParsing="false" onAction="#goBackButtonOnAction" prefHeight="26.0" prefWidth="66.0" text="Go Back" />
+      <Button fx:id="useraccountButton" layoutX="160.0" layoutY="136.0" mnemonicParsing="false" onAction="#useraccountButtonOnAction" prefHeight="50.0" prefWidth="200.0" text="User Account" />
    </children>
 </AnchorPane>
