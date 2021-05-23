@@ -7,10 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -24,9 +21,17 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class CreatePeopleController implements Initializable {
-
     @FXML
     private Button closeButton;
+    @FXML
+    private Button registerButton;
+    @FXML
+    private TextField people_planet_of_originTextField;
+    @FXML
+    private TextField people_weapon_idTextField;
+    @FXML
+    private TextField people_vehicles_idTextField;
+
 
     public void initialize(URL url, ResourceBundle resourceBundle){
     }
@@ -43,6 +48,10 @@ public class CreatePeopleController implements Initializable {
             e.printStackTrace();
             e.getCause();
         }
+    }
+
+    public void registerButtonOnAction(ActionEvent event){
+
     }
 
     public void closeButtonOnAction(ActionEvent event){

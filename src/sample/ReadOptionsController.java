@@ -106,34 +106,86 @@ public class ReadOptionsController implements Initializable {
             Statement statement = connectDB.createStatement();
             ResultSet queryResult = statement.executeQuery(query);
 
+            String displayData = "";
+
             boolean loop = true;
             while(loop) {
                 if (queryResult.next()) {
-                    screen1.setText(queryResult.getString("people_name"));
+                    displayData = queryResult.getString("people_id") + ", "
+                            + queryResult.getString("people_name") + ", "
+                            + queryResult.getString("people_height") + ", "
+                            + queryResult.getString("people_mass") + ", "
+                            + queryResult.getString("people_hair_color") + ", "
+                            + queryResult.getString("people_skin_color") + ", "
+                            + queryResult.getString("people_eye_color") + ", "
+                            + queryResult.getString("people_birth_year") + ", "
+                            + queryResult.getString("people_gender") + ", "
+                            + queryResult.getString("people_films");
+                    screen1.setText(displayData);
                 } else {
                     loop = false;
                     break;
                 }
                 if (queryResult.next()) {
-                    screen2.setText(queryResult.getString("people_name"));
+                    displayData = queryResult.getString("people_id") + ", "
+                            + queryResult.getString("people_name") + ", "
+                            + queryResult.getString("people_height") + ", "
+                            + queryResult.getString("people_mass") + ", "
+                            + queryResult.getString("people_hair_color") + ", "
+                            + queryResult.getString("people_skin_color") + ", "
+                            + queryResult.getString("people_eye_color") + ", "
+                            + queryResult.getString("people_birth_year") + ", "
+                            + queryResult.getString("people_gender") + ", "
+                            + queryResult.getString("people_films");
+                    screen2.setText(displayData);
                 } else {
                     loop = false;
                     break;
                 }
                 if (queryResult.next()) {
-                    screen3.setText(queryResult.getString("people_name"));
+                    displayData = queryResult.getString("people_id") + ", "
+                            + queryResult.getString("people_name") + ", "
+                            + queryResult.getString("people_height") + ", "
+                            + queryResult.getString("people_mass") + ", "
+                            + queryResult.getString("people_hair_color") + ", "
+                            + queryResult.getString("people_skin_color") + ", "
+                            + queryResult.getString("people_eye_color") + ", "
+                            + queryResult.getString("people_birth_year") + ", "
+                            + queryResult.getString("people_gender") + ", "
+                            + queryResult.getString("people_films");
+                    screen3.setText(queryResult.getString(displayData));
                 } else {
                     loop = false;
                     break;
                 }
                 if (queryResult.next()) {
-                    screen4.setText(queryResult.getString("people_name"));
+                    displayData = queryResult.getString("people_id") + ", "
+                            + queryResult.getString("people_name") + ", "
+                            + queryResult.getString("people_height") + ", "
+                            + queryResult.getString("people_mass") + ", "
+                            + queryResult.getString("people_hair_color") + ", "
+                            + queryResult.getString("people_skin_color") + ", "
+                            + queryResult.getString("people_eye_color") + ", "
+                            + queryResult.getString("people_birth_year") + ", "
+                            + queryResult.getString("people_gender") + ", "
+                            + queryResult.getString("people_films");
+                    screen4.setText(queryResult.getString(displayData));
                 } else {
                     loop = false;
                     break;
                 }
                 if (queryResult.next()) {
-                    screen5.setText(queryResult.getString("people_name"));
+                    displayData = queryResult.getString("people_id") + ", "
+                            + queryResult.getString("people_name") + ", "
+                            + queryResult.getString("people_height") + ", "
+                            + queryResult.getString("people_mass") + ", "
+                            + queryResult.getString("people_hair_color") + ", "
+                            + queryResult.getString("people_skin_color") + ", "
+                            + queryResult.getString("people_eye_color") + ", "
+                            + queryResult.getString("people_birth_year") + ", "
+                            + queryResult.getString("people_gender") + ", "
+                            + queryResult.getString("people_films");
+                    screen5.setText(queryResult.getString(displayData));
                 } else {
                     loop = false;
                     break;

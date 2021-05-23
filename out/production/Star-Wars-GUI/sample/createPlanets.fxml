@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
+<?import javafx.scene.control.TextField?>
 <AnchorPane prefHeight="567.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CreatePlanetsController">
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #22609b;">
@@ -17,15 +17,41 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="registerButton" layoutX="306.0" layoutY="473.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: #22609b;" text="Register" textFill="WHITE">
+      <Button fx:id="registerButton" layoutX="301.0" layoutY="485.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: #22609b;" text="Register" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
-      <Button fx:id="closeButton" layoutX="306.0" layoutY="513.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: #22609b;" text="Close" textFill="WHITE">
+      <Button fx:id="closeButton" layoutX="301.0" layoutY="525.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: #22609b;" text="Close" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
+      <Label layoutX="48.0" layoutY="113.0" text="Name" />
+      <TextField fx:id="nameTextField" layoutX="48.0" layoutY="141.0" />
+      <Label layoutX="48.0" layoutY="182.0" text="Rotation Period" />
+      <TextField fx:id="rotationPeriodTextField" layoutX="48.0" layoutY="210.0" />
+      <Label layoutX="48.0" layoutY="245.0" text="Orbital Period" />
+      <TextField fx:id="orbitalPeriodTextField" layoutX="48.0" layoutY="273.0" />
+      <Label layoutX="48.0" layoutY="314.0" text="Diameter" />
+      <TextField fx:id="diameterTextField" layoutX="48.0" layoutY="342.0" />
+      <Label layoutX="294.0" layoutY="118.0" text="Gravity" />
+      <TextField fx:id="gravityTextField" layoutX="294.0" layoutY="146.0" />
+      <Label layoutX="294.0" layoutY="187.0" text="Terrain" />
+      <TextField fx:id="terrainTextField" layoutX="294.0" layoutY="215.0" />
+      <Label layoutX="294.0" layoutY="250.0" text="Surface Water" />
+      <TextField fx:id="surfaceWaterTextField" layoutX="294.0" layoutY="278.0" />
+      <Label layoutX="294.0" layoutY="319.0" text="Population" />
+      <TextField fx:id="populationTextField" layoutX="294.0" layoutY="347.0" />
+      <Label layoutX="48.0" layoutY="383.0" text="Climate" />
+      <TextField fx:id="climateTextField" layoutX="48.0" layoutY="411.0" />
+      <Label layoutX="294.0" layoutY="388.0" text="Films" />
+      <TextField fx:id="filmsTextField" layoutX="294.0" layoutY="416.0" />
+      <Button fx:id="goBackButton" layoutX="22.0" layoutY="527.0" mnemonicParsing="false" onAction="#goBackButtonOnAction" prefHeight="26.0" prefWidth="66.0" text="Go Back" />
+      <Label fx:id="registrationMessageLabel" alignment="CENTER" layoutX="-1.0" layoutY="453.0" prefHeight="18.0" prefWidth="521.0" textFill="#0b5dea">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
