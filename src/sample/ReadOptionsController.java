@@ -45,8 +45,6 @@ public class ReadOptionsController implements Initializable {
     }
 
     public void usernameMenuItemOnAction(ActionEvent event){
-        //screen.setText("people");
-
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
@@ -153,7 +151,7 @@ public class ReadOptionsController implements Initializable {
                             + queryResult.getString("people_birth_year") + ", "
                             + queryResult.getString("people_gender") + ", "
                             + queryResult.getString("people_films");
-                    screen3.setText(queryResult.getString(displayData));
+                    screen3.setText(displayData);
                 } else {
                     loop = false;
                     break;
@@ -169,7 +167,7 @@ public class ReadOptionsController implements Initializable {
                             + queryResult.getString("people_birth_year") + ", "
                             + queryResult.getString("people_gender") + ", "
                             + queryResult.getString("people_films");
-                    screen4.setText(queryResult.getString(displayData));
+                    screen4.setText(displayData);
                 } else {
                     loop = false;
                     break;
@@ -185,7 +183,7 @@ public class ReadOptionsController implements Initializable {
                             + queryResult.getString("people_birth_year") + ", "
                             + queryResult.getString("people_gender") + ", "
                             + queryResult.getString("people_films");
-                    screen5.setText(queryResult.getString(displayData));
+                    screen5.setText(displayData);
                 } else {
                     loop = false;
                     break;
@@ -203,6 +201,7 @@ public class ReadOptionsController implements Initializable {
         Connection connectDB = connectNow.getConnection();
 
         String query = "select * from PLANETS";
+        String displayData = "";
 
         try{
             Statement statement = connectDB.createStatement();
@@ -211,31 +210,86 @@ public class ReadOptionsController implements Initializable {
             boolean loop = true;
             while(loop) {
                 if (queryResult.next()) {
-                    screen1.setText(queryResult.getString("planets_name"));
+                    displayData = queryResult.getString("planets_id") + ", "
+                            + queryResult.getString("planets_name") + ", "
+                            + queryResult.getString("planets_rotation_period") + ", "
+                            + queryResult.getString("planets_orbital_period") + ", "
+                            + queryResult.getString("planets_diameter") + ", "
+                            + queryResult.getString("planets_climate") + ", "
+                            + queryResult.getString("planets_gravity") + ", "
+                            + queryResult.getString("planets_terrain") + ", "
+                            + queryResult.getString("planets_surface_water") + ", "
+                            + queryResult.getString("planets_population") + ", "
+                            + queryResult.getString("planets_films");
+                    screen1.setText(displayData);
                 } else {
                     loop = false;
                     break;
                 }
                 if (queryResult.next()) {
-                    screen2.setText(queryResult.getString("planets_name"));
+                    displayData = queryResult.getString("planets_id") + ", "
+                            + queryResult.getString("planets_name") + ", "
+                            + queryResult.getString("planets_rotation_period") + ", "
+                            + queryResult.getString("planets_orbital_period") + ", "
+                            + queryResult.getString("planets_diameter") + ", "
+                            + queryResult.getString("planets_climate") + ", "
+                            + queryResult.getString("planets_gravity") + ", "
+                            + queryResult.getString("planets_terrain") + ", "
+                            + queryResult.getString("planets_surface_water") + ", "
+                            + queryResult.getString("planets_population") + ", "
+                            + queryResult.getString("planets_films");
+                    screen2.setText(displayData);
                 } else {
                     loop = false;
                     break;
                 }
                 if (queryResult.next()) {
-                    screen3.setText(queryResult.getString("planets_name"));
+                    displayData = queryResult.getString("planets_id") + ", "
+                            + queryResult.getString("planets_name") + ", "
+                            + queryResult.getString("planets_rotation_period") + ", "
+                            + queryResult.getString("planets_orbital_period") + ", "
+                            + queryResult.getString("planets_diameter") + ", "
+                            + queryResult.getString("planets_climate") + ", "
+                            + queryResult.getString("planets_gravity") + ", "
+                            + queryResult.getString("planets_terrain") + ", "
+                            + queryResult.getString("planets_surface_water") + ", "
+                            + queryResult.getString("planets_population") + ", "
+                            + queryResult.getString("planets_films");
+                    screen3.setText(displayData);
                 } else {
                     loop = false;
                     break;
                 }
                 if (queryResult.next()) {
-                    screen4.setText(queryResult.getString("planets_name"));
+                    displayData = queryResult.getString("planets_id") + ", "
+                            + queryResult.getString("planets_name") + ", "
+                            + queryResult.getString("planets_rotation_period") + ", "
+                            + queryResult.getString("planets_orbital_period") + ", "
+                            + queryResult.getString("planets_diameter") + ", "
+                            + queryResult.getString("planets_climate") + ", "
+                            + queryResult.getString("planets_gravity") + ", "
+                            + queryResult.getString("planets_terrain") + ", "
+                            + queryResult.getString("planets_surface_water") + ", "
+                            + queryResult.getString("planets_population") + ", "
+                            + queryResult.getString("planets_films");
+                    screen4.setText(displayData);
                 } else {
                     loop = false;
                     break;
                 }
                 if (queryResult.next()) {
-                    screen5.setText(queryResult.getString("planets_name"));
+                    displayData = queryResult.getString("planets_id") + ", "
+                            + queryResult.getString("planets_name") + ", "
+                            + queryResult.getString("planets_rotation_period") + ", "
+                            + queryResult.getString("planets_orbital_period") + ", "
+                            + queryResult.getString("planets_diameter") + ", "
+                            + queryResult.getString("planets_climate") + ", "
+                            + queryResult.getString("planets_gravity") + ", "
+                            + queryResult.getString("planets_terrain") + ", "
+                            + queryResult.getString("planets_surface_water") + ", "
+                            + queryResult.getString("planets_population") + ", "
+                            + queryResult.getString("planets_films");
+                    screen5.setText(displayData);
                 } else {
                     loop = false;
                     break;
